@@ -204,4 +204,17 @@ class NetworkFactory
 
         return $network;
     }
+
+    /**
+     * @return NetworkInterface
+     * @throws \Exception
+     */
+    public static function blackcoin() {
+        $network = self::create('19', '55', '99')
+            ->setHDPubByte('02cfbede')
+            ->setHDPrivByte('02cfbf60')
+            ->setNetMagicBytes('d9b4bef9'); // TODO Use correct value
+
+        return $network;
+    }
 }
